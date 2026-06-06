@@ -1,0 +1,9 @@
+const {Router}=require('express');
+const {getproduct,createproduct,updateproduct,deleteproduct,bulkinsert}= require('../controllers/productcontroller')
+let router=Router();
+router.post('/',createproduct)
+router.post('/bulk',bulkinsert)
+router.post('/',getproduct)
+router.post('/:id',updateproduct)
+router.post('/:id',deleteproduct)
+module.exports=router
