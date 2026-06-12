@@ -12,7 +12,7 @@ async function mail(email,username){
         pass:process.env.GMAILPASS
     }
 })
-
+//2.create message
 const message={
     from: process.env.GMAILUSER, // sender address
     to: email,
@@ -21,8 +21,9 @@ const message={
     html: "<b>registration</b>", // HTML body
 }
 
+//3.send mail
     await transporter.sendMail(message)
-    console.log("email sent")
+    console.log("email send")
 
 }
 module.exports=mail;

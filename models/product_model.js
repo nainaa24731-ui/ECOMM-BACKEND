@@ -9,11 +9,9 @@ let productschema=new mongoose.Schema({
         rate:{type:Number},
         count:{type:Number}
     }
-})
+},{ timestamps:true});
 
-let products=mongoose.model('products',productschema) 
-
-module.exports=products;
+module.exports=mongoose.model('products',productschema);
 
 // const mongoose=require ('mongoose');
 // const productschema=new mongoose.Schema({

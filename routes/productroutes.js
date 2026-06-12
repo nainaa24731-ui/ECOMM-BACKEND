@@ -4,6 +4,6 @@ let router=Router();
 router.post('/',createproduct)
 router.post('/bulk',bulkinsert)
 router.get('/',getproduct)
-router.post('/:id',updateproduct)
-router.post('/:id',deleteproduct)
+router.put('/:id',updateproduct)
+router.delete('/:id',deleteproduct)
 module.exports=router
