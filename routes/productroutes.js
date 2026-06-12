@@ -3,7 +3,7 @@ const {getproduct,createproduct,updateproduct,deleteproduct,bulkinsert}= require
 let router=Router();
 router.post('/',createproduct)
 router.post('/bulk',bulkinsert)
-router.post('/',getproduct)
+router.get('/',getproduct)
 router.post('/:id',updateproduct)
 router.post('/:id',deleteproduct)
 module.exports=router
